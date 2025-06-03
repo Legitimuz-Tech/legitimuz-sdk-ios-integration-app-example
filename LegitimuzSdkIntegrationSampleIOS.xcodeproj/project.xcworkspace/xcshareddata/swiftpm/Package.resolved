@@ -1,0 +1,15 @@
+{
+  "originHash" : "648dc4a173f329932ee01c9172f2f8917e571a86ffd13c0752bc9726873063ec",
+  "pins" : [
+    {
+      "identity" : "legitimuz-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Legitimuz-Tech/legitimuz-sdk-ios",
+      "state" : {
+        "revision" : "8bd647505a12c668f45b0b5c751677ba90f3d459",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}

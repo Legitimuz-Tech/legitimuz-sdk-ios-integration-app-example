@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7BCE0122DEDEC9800923A87 /* LegitimuzSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C7BCE0112DEDEC9800923A87 /* LegitimuzSDK */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C7BCDFF42DEDEB5900923A87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		C7BCDFFD2DEDEB5900923A87 /* LegitimuzSdkIntegrationSampleIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegitimuzSdkIntegrationSampleIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C7BCE0142DEDF29200923A87 /* Exceptions for "LegitimuzSdkIntegrationSampleIOS" folder in "LegitimuzSdkIntegrationSampleIOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C7BCDFE52DEDEB5700923A87 /* LegitimuzSdkIntegrationSampleIOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C7BCDFE82DEDEB5700923A87 /* LegitimuzSdkIntegrationSampleIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C7BCE0142DEDF29200923A87 /* Exceptions for "LegitimuzSdkIntegrationSampleIOS" folder in "LegitimuzSdkIntegrationSampleIOS" target */,
+			);
 			path = LegitimuzSdkIntegrationSampleIOS;
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BCE0122DEDEC9800923A87 /* LegitimuzSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +130,7 @@
 			);
 			name = LegitimuzSdkIntegrationSampleIOS;
 			packageProductDependencies = (
+				C7BCE0112DEDEC9800923A87 /* LegitimuzSDK */,
 			);
 			productName = LegitimuzSdkIntegrationSampleIOS;
 			productReference = C7BCDFE62DEDEB5700923A87 /* LegitimuzSdkIntegrationSampleIOS.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = C7BCDFDD2DEDEB5700923A87;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C7BCE0102DEDEC9800923A87 /* XCRemoteSwiftPackageReference "legitimuz-sdk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C7BCDFE72DEDEB5700923A87 /* Products */;
 			projectDirPath = "";
@@ -395,8 +417,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9SA54MPAQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LegitimuzSdkIntegrationSampleIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,8 +446,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9SA54MPAQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LegitimuzSdkIntegrationSampleIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +576,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7BCE0102DEDEC9800923A87 /* XCRemoteSwiftPackageReference "legitimuz-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Legitimuz-Tech/legitimuz-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7BCE0112DEDEC9800923A87 /* LegitimuzSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7BCE0102DEDEC9800923A87 /* XCRemoteSwiftPackageReference "legitimuz-sdk-ios" */;
+			productName = LegitimuzSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7BCDFDE2DEDEB5700923A87 /* Project object */;
 }
