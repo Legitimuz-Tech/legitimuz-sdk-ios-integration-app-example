@@ -28,9 +28,9 @@ A comprehensive sample iOS application demonstrating the integration of the Legi
 ## 📋 Requirements
 
 ### System Requirements
-- **iOS**: 14.0+
-- **Xcode**: 13.0+
-- **Swift**: 5.5+
+- **iOS**: 16.0+
+- **Xcode**: 15.0+
+- **Swift**: 6.1+
 
 ### Permissions Required
 The app requires the following permissions for verification processes:
@@ -63,6 +63,7 @@ In `ContentView.swift`, update the configuration parameters:
 let configuration = LegitimuzConfiguration(
     host: URL(string: "https://api.legitimuz.com")!, // Your API host
     token: "YOUR_API_TOKEN_HERE", // Replace with your actual API token
+    origin: "https://ios.app.legitimuz.com", // Origin header (required)
     appURL: URL(string: "https://widget.legitimuz.com")!, // Widget URL
     language: "pt", // Language: "pt", "en", or "es"
     enableDebugLogging: true, // Enable for development
@@ -117,6 +118,7 @@ LegitimuzSdkIntegrationSampleIOS/
 ### LegitimuzConfiguration Parameters
 - **host**: API endpoint URL
 - **token**: Authentication token for API access
+- **origin**: Origin header for API requests (required)
 - **appURL**: Widget application URL
 - **language**: Interface language ("pt", "en", "es")
 - **enableDebugLogging**: Debug mode for development
@@ -164,6 +166,7 @@ The app handles various verification events:
 
 1. **Session Generation Failed**
    - Verify API token is correct
+   - Ensure origin parameter is provided (required in v2.3.2+)
    - Check network connectivity
    - Ensure API host URL is accessible
 
@@ -189,11 +192,47 @@ enableDebugLogging: true
 
 This provides detailed console output for troubleshooting.
 
+## 🔄 Migration from SDK v2.3.1 to v2.3.2
+
+### New Required Parameter
+Starting with SDK version 2.3.2, the `origin` parameter is now **required** in the configuration:
+
+#### Before (v2.3.1):
+```swift
+let configuration = LegitimuzConfiguration(
+    host: URL(string: "https://api.legitimuz.com")!,
+    token: "your-api-token",
+    appURL: URL(string: "https://widget.legitimuz.com")!,
+    language: "pt",
+    enableDebugLogging: true,
+    enableInspection: false
+)
+```
+
+#### After (v2.3.2):
+```swift
+let configuration = LegitimuzConfiguration(
+    host: URL(string: "https://api.legitimuz.com")!,
+    token: "your-api-token",
+    origin: "https://ios.app.legitimuz.com", // New required parameter
+    appURL: URL(string: "https://widget.legitimuz.com")!,
+    language: "pt",
+    enableDebugLogging: true,
+    enableInspection: false
+)
+```
+
+### Updated Requirements
+- **iOS**: Now requires iOS 16.0+ (previously 14.0+)
+- **Swift**: Now requires Swift 6.1+ (previously 5.5+)
+- **Xcode**: Now requires Xcode 15.0+ (previously 13.0+)
+
 ## 📱 Supported Platforms
 
-- **iOS**: 14.0+
-- **iPadOS**: 14.0+
-- **Devices**: iPhone 6s and newer, iPad (5th generation) and newer
+- **iOS**: 16.0+
+- **iPadOS**: 16.0+
+- **Devices**: iPhone 8 and newer, iPad (6th generation) and newer
+- **Architecture**: Supports both arm64 and x86_64 architectures
 
 ## 🔒 Security Considerations
 
@@ -241,4 +280,4 @@ This sample application is provided for demonstration purposes. Please refer to 
 
 ---
 
-**SDK Version**: Compatible with LegitimuzSDKPackage latest version 2.3.1 or superior.
+**SDK Version**: Compatible with LegitimuzSDKPackage version 2.3.2 or superior.

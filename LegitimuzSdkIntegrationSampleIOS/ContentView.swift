@@ -187,6 +187,7 @@ struct VerificationView: View {
         let configuration = LegitimuzConfiguration(
             host: URL(string: "https://api.legitimuz.com")!, // Your production API host
             token: "4f83c2e7-4750-4405-ac00-f7a5deba10c8", // Your actual API token
+            origin: "https://ios.app.legitimuz.com", // Origin header (required)
             appURL: URL(string: "https://widget.legitimuz.com")!, // Widget URL (default)
             language: "pt", // Language: "pt", "en", or "es"
             enableDebugLogging: true, // Enable for development

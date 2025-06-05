@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Legitimuz-Tech/legitimuz-sdk-ios",
       "state" : {
-        "revision" : "8bd647505a12c668f45b0b5c751677ba90f3d459",
-        "version" : "2.3.1"
+        "revision" : "05ae040284787b8400288564acb8a871a1ec7b8d",
+        "version" : "2.3.2"
       }
     }
   ],
